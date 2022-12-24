@@ -29,7 +29,7 @@ for key, data in table.scan():
 bat = table.batch()
 
 #将data/data1.txt中的数据插入到表'test'中
-with open('data/data1.csv', 'r') as f:
+with open('../data/data1.csv', 'r') as f:
     for line in f:
         line = line.strip()
         if line[0] == 'D':
