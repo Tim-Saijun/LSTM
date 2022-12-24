@@ -4,15 +4,14 @@
 # @Author  : 杨再润
 # @Site  :  https://tim-saijun.github.io/
 import happybase
-connection = happybase.Connection(host='node2', port=9090)
 
-tables = connection.tables()
-print(tables)
-
-#连接static表
-table = connection.table('static')
 
 def getHbaseCount_minute_loc(time = '2022-12-24 15:00:00'):
+    connection = happybase.Connection(host='node2', port=9090)
+    tables = connection.tables()
+    print(tables)
+    # 连接static表
+    table = connection.table('static')
     #计算偏移量
     tth = time[11:13]
     tth =int(tth)
